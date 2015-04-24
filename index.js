@@ -48,7 +48,7 @@ function error_login(e){
 }
 
 $(document).ready(function(){
-	hello.init({github : 'b3a46d7b8622327ed886'},{
+	hello.init({github : '81880c547d6a143b59a7'},{
 		redirect_uri : 'redirect.html',
 		oauth_proxy : 'https://auth-server.herokuapp.com/proxy'});
 	access = hello('github');
