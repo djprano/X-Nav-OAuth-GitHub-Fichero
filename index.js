@@ -39,9 +39,9 @@ function login(){
 		token: token,
 		auth: "oauth"
 	});
-	$('redirect').hide('fast');
+	$('#redirect').hide('fast');
 	console.log('test');
-	$('repoform').show('fast');
+	$('#repoform').show('fast');
 }
 
 function error_login(e){
