@@ -42,6 +42,7 @@ function getRepo(){
 };
 
 function login(){
+	console.log('test');
 	auth = hello('github').getAuthResponse();
 	token = auth.access_token;
 	console.log(token);
@@ -57,7 +58,7 @@ function error_login(e){
 
 $(document).ready(function(){
 	hello.init({github : '81880c547d6a143b59a7'},{
-		redirect_uri : 'redirect.html',
+		redirect_uri : '/redirect.html',
 		oauth_proxy : 'https://auth-server.herokuapp.com/proxy'});
 	access = hello('github');
 	access.login({response_type: 'code'}).then(login,error_login);
