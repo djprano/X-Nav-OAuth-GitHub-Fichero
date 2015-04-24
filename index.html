@@ -14,5 +14,17 @@
 </head>
 <body>
 <p>Login in a Github acount...</p>
+	<div id="repoform">
+		<input type='text' name='user' value='djprano' id='user' size='10'/> 
+		<input type='text' name='repo' value='X-Nav-5.10.3-Datos-Google-Plus' id='repo' size='10'/>
+		<button id='getRepoData' type='button'>Grab repo data</button>
+	</div>
+	<div id="fileData" style="display: none">
+		<input type='text' name='filename' value='filename' id='filename' size='10'/> 
+		<textarea name="content" id='fileContent'></textarea>
+		<button type='button'id="sendFile">Send file</button>
+	</div>
+	<div id='repodata'>
+	</div>
 </body>
 </html>
