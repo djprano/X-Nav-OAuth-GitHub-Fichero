@@ -42,7 +42,6 @@ function getRepo(){
 };
 
 function login(){
-	console.log('test');
 	auth = hello('github').getAuthResponse();
 	token = auth.access_token;
 	console.log(token);
