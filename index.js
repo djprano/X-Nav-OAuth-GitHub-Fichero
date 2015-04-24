@@ -40,6 +40,7 @@ function login(){
 		auth: "oauth"
 	});
 	$('redirect').hide('fast');
+	console.log('test');
 	$('repoform').show('fast');
 }
 
