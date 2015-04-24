@@ -4,16 +4,6 @@ function errorSendFile(err){
 	console.log(err);
 }
 
-function getToken(){
-	token = $('#token').val();
-	github = new Github ({
-		token: token,
-		auth: "oauth"
-	});
-
-	$("#repoform").show('fast');
-};
-
 function sendFile(){
 	var filename = $('#filename').val();
 	var filecontent = $('#fileContent').val();
@@ -49,6 +39,8 @@ function login(){
 		token: token,
 		auth: "oauth"
 	});
+	$('redirect').hide('fast');
+	$('repoform').show('fast');
 }
 
 function error_login(e){
