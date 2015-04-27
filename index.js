@@ -8,12 +8,12 @@ function sendFile(){
 	var filename = $('#filename').val();
 	var filecontent = $('#fileContent').val();
 	repo.write('master', filename, filecontent, 'update', errorSendFile);
+	$('#readFile').show('fast');
 
 }
 
 function showRepoInfo(error,repo){
 	var repodata = $("#repodata");
-	console.log(repo);
 	if(error){
 		repodata.html("<p>Error " + error.error + "</p>");
 	}else{
@@ -48,6 +48,13 @@ function error_login(e){
 	alert(e.error.message);
 }
 
+function readFile(){
+	repo.read('master',$('#filename').val(), function(err, data) {
+	console.log (err, data);
+	$("#repodata").append("<p>Contents:</p><p>" + data + "</p>");
+    });
+}
+
 $(document).ready(function(){
 	hello.init({github : '81880c547d6a143b59a7'},{
 		redirect_uri : 'redirect.html',
@@ -57,4 +64,5 @@ $(document).ready(function(){
 
 	$('#getRepoData').click(getRepo);
 	$('div#fileData button').click(sendFile);
+	$('div#readFile button').click(readFile);
 });
