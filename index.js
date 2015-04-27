@@ -13,6 +13,7 @@ function sendFile(){
 
 function showRepoInfo(error,repo){
 	var repodata = $("#repodata");
+	console.log(repo);
 	if(error){
 		repodata.html("<p>Error " + error.error + "</p>");
 	}else{
